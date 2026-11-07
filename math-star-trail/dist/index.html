@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>星球算術探險</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#25274e,#090e22 72%);min-height:100vh;color:#f3f6ff;font-family:system-ui,sans-serif}main{width:min(850px,94vw);margin:auto;padding:24px 0}small,p,footer{color:#b8c9ed}h1{margin:4px 0;font-size:clamp(2rem,6vw,3.4rem)}p{margin:8px 0 14px}nav{display:flex;gap:6px;margin-bottom:10px}nav span{flex:1;text-align:center;border:1px solid #44547b;border-radius:8px;padding:6px 0;font-size:clamp(.68rem,2.5vw,1rem)}nav .active{background:#244466;color:#91ffdd;border-color:#91ffdd}.hud,footer{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.hud{padding:10px 16px;background:#1b2748;border:1px solid #44547b;border-radius:12px 12px 0 0}.hud strong{display:block;font-size:clamp(1.4rem,5vw,2rem)}.score{text-align:right;color:#91ffdd}.field{position:relative;border:1px solid #44547b;border-radius:0 0 12px 12px;overflow:hidden}#game{width:100%;aspect-ratio:2}canvas{display:block}#overlay{position:absolute;inset:0;display:grid;place-items:center;background:#080d20b9;text-align:center;padding:6px}#overlay[hidden]{display:none}#overlay div{padding:clamp(7px,2vw,18px);background:#1d2a4c;border:1px solid #5d77a7;border-radius:12px}#overlay p{margin:5px 0 9px;font-size:clamp(.72rem,2.6vw,1rem)}button{cursor:pointer;border:0;border-radius:8px;background:#91ffdd;color:#10273a;font:inherit;font-weight:bold;padding:7px 14px}button:focus-visible{outline:3px solid white}footer button{min-width:44px;min-height:44px;background:#25355d;color:white;touch-action:none;padding:4px}#feedback{min-height:1.5em;color:#ffe5a0}
+</style>
+<main><small>✦　數學探險隊　/　PHASER ARCADE</small><h1>星球算術探險</h1>
+<p>駕駛太空船，收集正確的數字能量球！</p><nav id="levels" aria-label="關卡進度"></nav>
+<div class="hud"><div><small id="level">任務準備</small><strong id="question">準備出發？</strong></div><div class="score"><small>累計分數</small><strong id="score">0</strong></div></div>
+<div class="field"><div id="game"></div><div id="overlay"><div><b id="message">✦ 開始太空任務</b><p id="details">五個星球等你探索。</p><button id="action" disabled>載入中…</button></div></div></div>
+<p id="feedback" role="status">答對 +10 分　·　答錯 −5 分</p>
+<footer><span>方向鍵或 WASD 移動</span><div><button data-key="left" aria-label="向左">←</button> <button data-key="up" aria-label="向上">↑</button> <button data-key="down" aria-label="向下">↓</button> <button data-key="right" aria-label="向右">→</button></div></footer>
+</main><script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script><script src="game.js"></script></html>
